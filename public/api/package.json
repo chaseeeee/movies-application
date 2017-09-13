@@ -1,0 +1,13 @@
+{
+  "movies": [
+    {
+      "title": "Terminator",
+      "rating": "5 Stars",
+      "id": 1
+    }
+    {
+      "title": "Terminator2",
+      "rating": "4 Stars",
+      "id": 2
+    }
+  ]
