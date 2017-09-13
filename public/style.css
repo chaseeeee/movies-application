@@ -1,10 +1,31 @@
 html, body {
-    height: 100%;
+	font-family: Verdana;
+	height: 100%;
+	font-family: 15pt;
+	background url:
 }
 
-.container {
-    position: relative;
-    top: 50%;
-    transform: translateY(-100%);
-    text-align: center;
+#container {
+	position: relative;
+	top: 50%;
+	transform: translateY(-100%);
+	text-align: center;
+	box-sizing: border-box;
+	border-width: 1px;
+	border-color: black;
+	height: 300px;
+}
+
+h1 {
+	font-size: 12
+}
+
+#movieDisplay {
+	position: relative;
+	top: 50%;
+	transform: translateY(-100%);
+	text-align: center;
+	box-sizing: border-box;
+	border-width: 1px;
+	border-color: black;
 }
