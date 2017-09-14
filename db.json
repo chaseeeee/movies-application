@@ -1,5 +1,6 @@
 {
   "movies": [
+
     {
       "title": "Terminator",
       "rating": "4",
@@ -9,6 +10,16 @@
       "title": "Star Wars: A New Hope",
       "rating": "5",
       "id": 2
+    },
+    {
+      "title": "My Little Pony",
+      "rating": "2",
+      "id": 3
+    },
+    {
+      "title": "IT",
+      "rating": "5",
+      "id": 4
     }
   ]
 }

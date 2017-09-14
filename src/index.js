@@ -12,7 +12,7 @@ const getMovies = require('./getMovies.js');
 const movieDisplay = document.getElementById("movieDisplay");
 const movieSubmit = document.getElementById("movieSubmit");
 const newMovie = document.getElementById("newMovie");
-const rating = document.getElementsByName("ratings");
+const rating = document.getElementsByClassName("ratings");
 
 let movieObject = {};
 /* GET THESE MOVIES */
@@ -21,7 +21,7 @@ getMovies().then((moviesData) => {
     let movies = "";
     console.log('Here are all the movies:');
     moviesData.forEach(({title, rating, id}) => {
-        console.log(`id#${id} - ${title} - rating: ${rating}`);
+        /*console.log(`id#${id} - ${title} - rating: ${rating}`);*/
 
         movies += `<tr><td>id#${id}</td>${title}<td>rating: ${rating}</td></tr>`;
 
@@ -37,17 +37,12 @@ getMovies().then((moviesData) => {
     console.log(error);
 });
 
- movieSubmit.click(addMovie);
+movieSubmit.addEventListener("click", addMovie);
 
- function addMovie() {
+function addMovie() {
+    console.log(newMovie.value, rating.value + "MOVIES");
+}
 
-     let movieForm = newMovie.value;
-     let ratingForm = rating.value;
-
-     movieObject += `${movieForm} rating:${ratingForm}`;
-     movieObject.push(movieDisplay);
-     /*ratingvalue.concat(movieObject);*/
-     console.log("ADDED MOVIES");
- }
+addMovie();
 
 
