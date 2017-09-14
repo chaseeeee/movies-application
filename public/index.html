@@ -3,33 +3,39 @@
 <head>
     <meta charset="UTF-8" />
     <title>My Application</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/loader.css">
 </head>
 <body>
 
     <div id="container">
         <h1>CodeUp "IMDJ" by Chase and DJ</h1>
-        <div class="table" id="movieDisplay"></div>
+        <div id="movieDisplay">
+            <div class="loader"></div>
+        </div>
+
+        <div id="movieSubmit">
             <form>
-                <input id="new-movie" placeholder="Enter Movie Title">
-                <!--<p>Rate Movie</p>-->
-                <label>
-                    1<input type="radio" name="ratings" value="1">
-                </label>
-                <label>
-                    2<input type="radio" name="ratings" value="2">
-                </label>
-                <label>
-                    3<input type="radio" name="ratings" value="3">
-                </label>
-                <label>
-                    4<input type="radio" name="ratings" value="4">
-                </label>
-                <label>
-                    5<input type="radio" name="ratings" value="5">
-                </label>
-                <button>Submit</button>
+            <input id="new-movie" placeholder="Enter Movie Title">
+            <!--<p>Rate Movie</p>-->
+            <label>
+                1<input type="radio" name="ratings" value="1">
+            </label>
+            <label>
+                2<input type="radio" name="ratings" value="2">
+            </label>
+            <label>
+                3<input type="radio" name="ratings" value="3">
+            </label>
+            <label>
+                4<input type="radio" name="ratings" value="4">
+            </label>
+            <label>
+                5<input type="radio" name="ratings" value="5">
+            </label>
+            <button id="movieSubmit" type="button">Submit Movie</button>
             </form>
+        </div>
 
     </div>
 
