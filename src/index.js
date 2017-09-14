@@ -13,6 +13,7 @@ const movieDisplay = document.getElementById("movieDisplay");
 const movieSubmit = document.getElementById("movieSubmit");
 const newMovie = document.getElementById("newMovie");
 const rating = document.getElementsByClassName("ratings");
+const form = document.getElementById("form");
 
 let movieObject = {};
 /* GET THESE MOVIES */
@@ -38,9 +39,16 @@ getMovies().then((moviesData) => {
 });
 
 movieSubmit.addEventListener("click", addMovie);
+form.addEventListener('submit',checkAnswer);
+function checkAnswer(e) {
+    e.preventDefault();
 
+}
+let ratings = rating.filter(function (val) {
+    return val.checked;
+});
 function addMovie() {
-    console.log(newMovie.value, rating.value + "MOVIES");
+    console.log(newMovie.value, ratings.value + "MOVIES");
 }
 
 addMovie();
