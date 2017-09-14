@@ -1,8 +1,8 @@
 html, body {
-	font-family: Verdana;
+	/*font-family: Verdana;*/
 	height: 100%;
-	font-family: 15pt;
-	background url:
+	font-size: 15pt;
+	/*background url:*/
 }
 
 #container {
@@ -11,21 +11,21 @@ html, body {
 	transform: translateY(-100%);
 	text-align: center;
 	box-sizing: border-box;
-	border-width: 1px;
-	border-color: black;
 	height: 300px;
 }
 
-h1 {
-	font-size: 12
-}
 
 #movieDisplay {
 	position: relative;
 	top: 50%;
+    left: 20%;
 	transform: translateY(-100%);
-	text-align: center;
-	box-sizing: border-box;
-	border-width: 1px;
-	border-color: black;
+	text-align: left;
+    box-sizing: border-box;
+	border: 1px solid black;
+    width: 60%;
+
+}
+form {
+    top: 50px;
 }
