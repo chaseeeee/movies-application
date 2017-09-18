@@ -5,25 +5,28 @@
     <title>My Application</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/loader.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
 </head>
 <body>
 
     <div id="container">
-        <h1>CodeUp "IMDJ" by Chase and DJ</h1>
+        <img src="/images/fandango-logo.svg">
+
         <div id="movieDisplay">
             <div class="loader"></div>
         </div>
 
         <div>
-            <form id="form">
-            <input id="newMovie" placeholder="Enter Movie Title">
-            <!--<p>Rate Movie</p>-->
+            <form>
+            <input id="newMovie" class="formField" placeholder="Add a Movie Title:">
+
                 1<input type="radio" name="ratings" class="ratings" value="1">
                 2<input type="radio" name="ratings" class="ratings" value="2">
                 3<input type="radio" name="ratings" class="ratings" value="3">
                 4<input type="radio" name="ratings" class="ratings" value="4">
                 5<input type="radio" name="ratings" class="ratings" value="5">
-            <button id="movieSubmit" type="button">Submit Movie</button>
+            <button id="movieSubmit" type="button" class="button">Submit Movie</button>
             </form>
         </div>
 

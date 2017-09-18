@@ -1,25 +1,84 @@
 {
   "movies": [
-
     {
-      "title": "Terminator",
-      "rating": "4",
-      "id": 1
-    },
-    {
-      "title": "Star Wars: A New Hope",
-      "rating": "5",
-      "id": 2
-    },
-    {
-      "title": "My Little Pony",
+      "title": "My Little Pony the Movie",
       "rating": "2",
       "id": 3
     },
     {
-      "title": "IT",
+      "title": "Stephen King's IT",
       "rating": "5",
       "id": 4
+    },
+    {
+      "title": "Weekend at Bernies",
+      "rating": "5",
+      "id": 5
+    },
+    {
+      "title": "Ghost Busters (Original)",
+      "rating": "5",
+      "id": 7
+    },
+    {
+      "title": "Ghost Busters (Remake 2015)",
+      "rating": "-5 HORRIBLE",
+      "id": 8
+    },
+    {
+      "title": "Satan's Children IV",
+      "rating": "666",
+      "id": 9
+    },
+    {
+      "title": "Pirates of the Caribeean",
+      "rating": "Yo ho ho and a bottle of Rum",
+      "id": 10
+    },
+    {
+      "title": "Black Ninja III",
+      "rating": "2",
+      "id": 11
+    },
+    {
+      "title": "You Stole My Girlfrind Again",
+      "rating": "5",
+      "id": 12
+    },
+    {
+      "title": "I'm Gon' Getchoo Sucka'!!!",
+      "rating": "4",
+      "id": 13
+    },
+    {
+      "title": "666 The Devil's Trix Part 32",
+      "rating": "3",
+      "id": 14
+    },
+    {
+      "title": "Donald Trumps Revenge",
+      "rating": "4",
+      "id": 15
+    },
+    {
+      "title": "Kim Jong Un's Haircut Sux Part 5",
+      "rating": "3",
+      "id": 16
+    },
+    {
+      "title": "I burned down the office 2",
+      "rating": "5",
+      "id": 17
+    },
+    {
+      "title": "Brandon is Amazing",
+      "rating": "4",
+      "id": 19
+    },
+    {
+      "title": "Brandon is Amazing II",
+      "rating": "5",
+      "id": 20
     }
   ]
 }

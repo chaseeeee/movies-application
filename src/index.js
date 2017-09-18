@@ -8,49 +8,59 @@ sayHello('World');
 /**
  * require style imports
  */
-const getMovies = require('./getMovies.js');
+const fetchMovie = require('./getMovies.js');
 const movieDisplay = document.getElementById("movieDisplay");
 const movieSubmit = document.getElementById("movieSubmit");
-const newMovie = document.getElementById("newMovie");
-const rating = document.getElementsByClassName("ratings");
-const form = document.getElementById("form");
+const dataLoad = loadNewData();
+
 
 let movieObject = {};
 /* GET THESE MOVIES */
 
-getMovies().then((moviesData) => {
-    let movies = "";
-    console.log('Here are all the movies:');
-    moviesData.forEach(({title, rating, id}) => {
-        /*console.log(`id#${id} - ${title} - rating: ${rating}`);*/
+function loadNewData() {
 
-        movies += `<tr><td>id#${id}</td>${title}<td>rating: ${rating}</td></tr>`;
+    fetchMovie.getMovies().then((moviesData) => {
+        let movies = "";
+        console.log('Here are all the movies:');
+        moviesData.forEach(({title, rating, id}) => {
+            /*console.log(`id#${id} - ${title} - rating: ${rating}`);*/
+
+            movies += `<tr><td><button type="button" class="deleteMovie" data-id="${id}" class="button">Remove</button></td><td>${id}</td><td><a href="https://www.youtube.com/results?search_query=${title}" target="new">${title}</a></td><td>rating: ${rating}</td><td><a href="http://www.imdb.com/find?ref_=nv_sr_fn&q=${title}&s=all" target="_blank">IMDB Lookup</a></td></tr>`;
 
 
-        /* DISPLAY THE MOVIES ON THE PAGE  */
+            /*        https://www.youtube.com/results?search_query=terminator*/
+
+            /* DISPLAY THE MOVIES ON THE PAGE  */
+        });
+
+        movieDisplay.innerHTML = `<table id="movieTable">${movies}</table>`;
+        /* CATCH THE ERRORS AND DISPLAY OOPS*/
+
+        const deleteMovieButtons = document.getElementsByClassName("deleteMovie");
+        console.log(deleteMovieButtons);
+
+        Array.from(deleteMovieButtons).forEach(function (elem) {
+            elem.addEventListener("click", function() {
+                let id = this.getAttribute("data-id");
+                fetchMovie.deleteMovie(id);
+            });
+        })
+
+
+
+    }).catch((error) => {
+        /*alert('Oh no! Something went wrong.\nCheck the console for details.')*/
+        console.log(error);
     });
 
-    movieDisplay.innerHTML = `<table class="table">${movies}</table>`;
-    /* CATCH THE ERRORS AND DISPLAY OOPS*/
-
-}).catch((error) => {
-    /*alert('Oh no! Something went wrong.\nCheck the console for details.')*/
-    console.log(error);
-});
-
-movieSubmit.addEventListener("click", addMovie);
-form.addEventListener('submit',checkAnswer);
-function checkAnswer(e) {
-    e.preventDefault();
-
-}
-let ratings = rating.filter(function (val) {
-    return val.checked;
-});
-function addMovie() {
-    console.log(newMovie.value, ratings.value + "MOVIES");
 }
 
-addMovie();
+loadNewData();
+
+movieSubmit.addEventListener("click", fetchMovie.postMovie);
+
+module.exports = {loadNewData};
+
+
 
 

@@ -1,10 +1,23 @@
 html, body {
-	/*font-family: Verdana;*/
+	font-family: Verdana;
 	height: 100%;
 	font-size: 15pt;
-	/*background url:*/
+	background: #002100 url("/images/curtains.jpg");
+	background-size: cover;
+	color: lightgray;
 }
-
+a:link {
+	color: lightgray;
+	text-decoration: none;
+}
+a:visited {
+	color: lightgray;
+	text-decoration: none;
+}
+a:hover {
+	color: indianred;
+	text-decoration: none;
+}
 #container {
 	position: relative;
 	top: 50%;
@@ -12,26 +25,59 @@ html, body {
 	text-align: center;
 	box-sizing: border-box;
 	height: 300px;
+	padding-left: 8%;
+	padding-right: 10%;
+	max-width: 100%;
 }
 
-
 #movieDisplay {
-
-	text-align: left;
+	position: absolute;
+	top: 50%;
+	left: 50%:
 	box-sizing: border-box;
 	border: 1px solid black;
 	width: 80%;
+	border-radius: 20px;
+	padding: 15px;
+	background-color: #2b2b2b;
 
 }
 form {
     top: 50px;
 }
 
-.table {
-	box-sizing: border-box;
+}
+
+#movieTable {
+	font-size: 15pt;
 	border-width: 1px;
 	border-color: black;
+	padding: 50px:;
+	width: 100%;
 }
-#movieSubmit {
+
+.button {
+	font-size: 10pt;
+	border-radius: 5px;
+}
+
+.formField {
+	font-size: 10pt;
+	border-radius: 5px;
+	width = 300px;
+}
+td {
+	text-align: left;
+}
+.movieReviews {
+	font-family: 'Pacifico', cursive;
 	font-size: 20pt;
+	color: snow  ;
+}
+.reviewBox {
+	border-radius: 10px;
+	background: transparent;
+	opacity: .8;
+	width: 300px;
+
 }
